@@ -19,20 +19,26 @@ public class TitanicProject {
     
     //essential variables    
     String sex;
+    int shipclass;
     int age;
     int chances = 0;
     String ifparent;
-    String onlyparent;
+    String onlyparent = "no";
         
-// TODO code application logic here
+// application logic here
         Scanner input = new Scanner(System.in);
         // gathering information
         System.out.println("What is your gender?");
         sex = input.nextLine();
+        System.out.println("In which class do you travel?");
+        shipclass = input.nextInt();
         System.out.println("Are you a parent?");
         ifparent = input.nextLine();
-        System.out.println("Are you single parent?");
+        if(ifparent .equals("yes")){
+            System.out.println("Are you single parent?");
         onlyparent = input.nextLine();
+        }
+        
         System.out.println("What is your age?");
         age = input.nextInt();
         
@@ -48,15 +54,16 @@ public class TitanicProject {
         }
         if(ifparent .equals("yes")){
             chances++;
-        }
-        if(onlyparent .equals("yes")){
+            if(onlyparent .equals("yes")){
             chances++;
         }
+        }
+        
         
         if(chances < 5){
         System.out.println("You're chances are very low");
     }else{
-       System.out.println("You're safe");
+       System.out.println("You're safe " + chances);
         }
     }
     
