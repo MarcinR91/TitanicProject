@@ -8,6 +8,8 @@ package titanicproject;
 /**
  *
  * @author marcinr
+ * 
+ * testing reading information from file
  */
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -27,10 +29,9 @@ public class ReadCSV {
             br = new BufferedReader(new FileReader(csvFile));
             while ((line = br.readLine()) != null) {
 
-                // use comma as separator
                 String[] PassengerId = line.split(cvsSplitBy);
 
-                System.out.println("Sex " + PassengerId[3]);
+                System.out.println("Name " + PassengerId[3]);
 
             }
 
