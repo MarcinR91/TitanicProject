@@ -62,8 +62,8 @@ public class TitanicProject {
         }
         if(chances < 5){
         System.out.println("You're chances are very low");
-    }else{
-       System.out.println("You're safe " + chances);
+        }else{
+        System.out.println("You're safe " + chances);
         }
     }
     
